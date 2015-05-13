@@ -25,6 +25,7 @@ imageDiff({
   actualImage: 'checkerboard.png',
   expectedImage: 'white.png',
   diffImage: 'difference.png',
+  threshold: 0
 }, function (err, imagesAreSame) {
   // error will be any errors that occurred
   // imagesAreSame is a boolean whether the images were the same or not
@@ -44,6 +45,7 @@ Create an differential image between multiple images
     - options.expectedImage `String` - Path to expected image file
         - If options.expectedImage does not exist, a transparent image with the same height/width will be created.
     - options.diffImage `String` - Path to output differential image
+    - options.threshold `Float` - Float from `0` to `1` of how different the images can be. `0` means they must be identical. `1` means they can be completely different.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
