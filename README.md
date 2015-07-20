@@ -26,10 +26,11 @@ imageDiff({
   expectedImage: 'white.png',
   diffImage: 'difference.png',
   threshold: 0
-}, function (err, imagesAreSame) {
+}, function (err, imagesAreSame,diffPercent) {
   // error will be any errors that occurred
   // imagesAreSame is a boolean whether the images were the same or not
   // diffImage will have an image which highlights differences
+  // diffPercent will have percentage of difference between two images
 });
 ```
 
